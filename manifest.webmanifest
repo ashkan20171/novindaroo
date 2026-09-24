@@ -1,0 +1,17 @@
+{
+  "name": "نوین‌دارو",
+  "short_name": "نوین‌دارو",
+  "start_url": "index.html",
+  "display": "standalone",
+  "dir": "rtl",
+  "lang": "fa",
+  "theme_color": "#087f5b",
+  "background_color": "#f6faf8",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
