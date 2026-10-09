@@ -1,56 +1,86 @@
-# نوین‌دارو — بازطراحی Frontend
+<div align="center">
 
-این نسخه یک بازطراحی کامل و مستقل از فرانت‌اند قدیمی است و با HTML5 + CSS3 + Vanilla JavaScript ساخته شده؛ بدون npm و بدون نیاز به build.
+# 💊 NovinDaroo — Bilingual Digital Pharmacy Experience
 
-## امکانات اصلی
-- طراحی RTL و کاملاً واکنش‌گرا، موبایل‌محور
-- هویت بصری جدید با سبز سلامت، فضای سفید و رنگ‌های تاکیدی کنترل‌شده
-- صفحه خانه مدرن با Hero، دسته‌بندی، اعتماد، محصولات، خدمات و خبرنامه
-- فروشگاه با جستجو، فیلتر دسته‌بندی و مرتب‌سازی
-- صفحه جزئیات محصول با URL پارامتری
-- سبد خرید واقعی سمت مرورگر با localStorage
-- تغییر تعداد و حذف محصول
-- checkout و صفحه تایید سفارش نمایشی
-- ارسال نسخه با آپلود فایل و پیش‌نمایش نام فایل
-- خدمات سلامت، درباره ما، تماس، سوالات متداول، مجله و مقاله
-- دستیار هوشمند Frontend با پاسخ‌های مبتنی بر intent؛ آماده اتصال به API/LLM
-- تم روشن/تیره
-- Toast notification
-- Wishlist نمایشی
-- SEO پایه: title/description/canonical/OG/JSON-LD، sitemap و robots
-- accessibility: skip link، label، focus، semantic HTML، alt و tap target مناسب
-- فونت فارسی محلی و assetهای پروژه؛ بدون وابستگی به Google Fonts
+**A design-led healthcare storefront portfolio, built with accessible vanilla web technologies.**
 
-## نکته مهم
-این پروژه Frontend است. برای فروش واقعی دارو، احراز هویت، نسخه الکترونیک، پرداخت، موجودی، ارسال، CRM و چت‌بات واقعی باید Backend و API امن اضافه شود. همچنین داروهای نسخه‌ای نباید صرفاً بر اساس اطلاعات Frontend فروخته شوند.
+English-first · فارسی / RTL · 3D-inspired visuals · Product discovery · Wishlist · Optional AI backend
 
-## اجرا
-فایل `index.html` را در مرورگر باز کنید یا پوشه را روی یک static server ساده اجرا کنید.
+![HTML5](https://img.shields.io/badge/HTML5-Semantic-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572B6?logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=black) ![Node.js](https://img.shields.io/badge/Node.js-Optional_Backend-339933?logo=nodedotjs&logoColor=white)
 
+</div>
 
-## Stage 1 bilingual upgrade
-- English is the default language on first visit; Persian is available from the header. Preference is stored in localStorage.
-- Document direction switches between LTR and RTL. Core navigation and common storefront labels have English equivalents. Longer editorial text remains Persian until fully localized; this is a partial translation release.
-- Currency remains the original IRR/Toman catalogue values; English display uses IRR, **not** an invented USD exchange rate.
-- Chat is a rule-based demo, not a live AI model. User chat text is inserted safely as text, not HTML. Do not enter sensitive health data.
-- Cart, checkout, prescription upload, contact and newsletter are frontend demonstrations. No payment, order or prescription is sent to a server.
-- Run using `python -m http.server 8000` and visit http://localhost:8000.
-- Production TODO: full English content localization, secure backend, licensed pharmacy verification, secure prescription processing, real AI endpoint with privacy safeguards, and test suite.
+## ✨ Project overview
 
+NovinDaroo explores the intersection of **healthcare UX, accessible commerce and internationalization**. It is a multi-page portfolio demonstration rather than a licensed online pharmacy. The interface defaults to English and supports Persian with direction-aware RTL/LTR layouts.
 
-## Stage 3: 3D-inspired page backgrounds
-See `STAGE3_NOTES.md`. All pages use a locally bundled SVG medical background.
+## Product highlights
 
+| Experience | Implementation |
+|---|---|
+| 🌍 Localization | English default, Persian toggle, direction switching; some legacy content remains untranslated |
+| 🛍️ Storefront | Product catalog, search/filter/sort, detail view, browser-based cart |
+| ❤️ Saved products | LocalStorage wishlist |
+| ⌨️ Quick navigation | Ctrl/Cmd+K bilingual searchable navigation dialog |
+| 🎨 Visual design | Healthcare color system, responsive cards, local 3D-inspired SVG backgrounds, light/dark UI |
+| 💬 Assistant | Rule-based demo and optional Node.js API integration; live AI requires a server-side API key |
+| ♿ Accessibility | Semantic markup, keyboard navigation, focus management, reduced-motion support |
+| 🔐 Trust | Explicit demo disclosures and privacy page |
 
-See STAGE4_NOTES.md for the latest visual improvements and remaining limitations.
+## 🧱 Architecture
 
+```text
+index.html / shop.html / other pages
+├── css/          # Base design + progressive enhancements
+├── js/           # Catalog, i18n, UI interactions and stage modules
+├── images/       # Local visual assets
+├── assets/       # Icons and 3D-inspired background artwork
+└── server/       # Optional Node.js chat API
+```
 
-See `STAGE5_NOTES.md` for the Stage 5 improvements and limitations.
+The project intentionally uses **HTML, CSS and vanilla JavaScript** on the client. No frontend build step is required.
 
+## 🚀 Run locally
 
-## Stage 6
-See [STAGE6_NOTES.md](STAGE6_NOTES.md) for wishlist functionality and limitations.
+**Frontend only** (Python 3):
 
+```bash
+python -m http.server 8000
+```
 
-## Stage 7
-See `STAGE7_NOTES.md` for page-specific backgrounds, privacy disclosure, and demo-service safeguards.
+Visit `http://localhost:8000`. For the optional chat backend (Node.js 20+):
+
+```bash
+node server/server.js
+```
+
+Visit `http://localhost:3000`. To enable AI responses, configure `OPENAI_API_KEY` as an environment variable **on the server**, not in client JavaScript. Without it, chat is demo-only.
+
+## 🧪 Quality checks
+
+```bash
+for file in js/*.js server/*.js; do node --check "$file"; done
+```
+
+Also manually verify EN/FA switching, desktop/mobile navigation, cart, wishlist, quick navigation (Ctrl/Cmd+K), and keyboard-only use. Automated end-to-end browser coverage is not yet complete.
+
+## 🩺 Responsible scope
+
+**Portfolio demo only.** There is no verified pharmacy license, real payment processor, fulfillment service, or secure prescription-processing workflow. Do not submit real patient information. The assistant is not a medical professional and must not be used for diagnosis or prescribing. See [SECURITY.md](SECURITY.md).
+
+## 🗺️ Roadmap
+
+- Complete translation of all legacy and dynamic content
+- Add automated cross-browser and accessibility testing
+- Consolidate incremental CSS/JS modules into maintainable components
+- Add authenticated commerce APIs and compliant prescription workflows *only after regulatory and security review*
+- Add CI quality gates, performance budgets and production monitoring
+
+## 🤝 Engineering & collaboration
+
+Built as a portfolio case study in responsive frontend engineering, localization and thoughtful healthcare UX. Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+**Suggested repository:** `novindaroo-digital-pharmacy-platform`  
+**GitHub About:** `Bilingual EN/FA digital pharmacy portfolio | Responsive HTML, CSS & JavaScript, RTL/LTR, 3D-inspired UI, wishlist, accessible UX & optional Node.js AI assistant.`
