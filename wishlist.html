@@ -4,23 +4,23 @@
 <meta charset="utf-8">
 <meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ارسال نسخه آنلاین | نوین‌دارو</title>
-<meta name="description" content="ارسال نسخه و ثبت درخواست برای داروخانه نوین‌دارو؛ فرم واکنش‌گرا و آماده اتصال به بک‌اند.">
+<title>Wishlist | Novin Daroo</title>
+<meta name="description" content="خرید آنلاین محصولات سلامت، ویتامین‌ها، مکمل‌ها، محصولات پوست و مو و تجهیزات پزشکی در نوین‌دارو.">
 <meta name="theme-color" content="#087f5b">
 <link rel="icon" href="assets/favicon.svg">
 <link rel="stylesheet" href="css/style.css">
 <link rel="canonical" href="index.html">
-<meta property="og:title" content="ارسال نسخه آنلاین | نوین‌دارو"><meta property="og:description" content="ارسال نسخه و ثبت درخواست برای داروخانه نوین‌دارو؛ فرم واکنش‌گرا و آماده اتصال به بک‌اند."><meta property="og:type" content="website">
+<meta property="og:title" content="فروشگاه محصولات سلامت | نوین‌دارو"><meta property="og:description" content="خرید آنلاین محصولات سلامت، ویتامین‌ها، مکمل‌ها، محصولات پوست و مو و تجهیزات پزشکی در نوین‌دارو."><meta property="og:type" content="website">
 
 <script src="js/i18n.js" defer></script>
 <link rel="stylesheet" href="css/stage8.css">
-</head><body data-page="prescription">
+</head><body data-page="wishlist">
 <a class="skip" href="#main">پرش به محتوای اصلی</a>
 <div class="topbar"><div class="container"><span>پشتیبانی داروساز · پاسخ‌گویی سریع</span><span class="optional">ارسال رایگان برای سفارش‌های بالای ۱ میلیون تومان · <a href="tel:+982100000000">تماس با ما</a></span></div></div>
 <header class="header"><div class="container nav">
 <a class="brand" href="index.html"><span class="brand-mark"></span><span>نوین‌دارو<small>سلامت، ساده و مطمئن</small></span></a>
 <nav class="menu" aria-label="منوی اصلی">
-<a class="" href="index.html">خانه</a><a class="" href="shop.html">فروشگاه</a><a class="" href="services.html">خدمات سلامت</a><a href="prescription.html">ارسال نسخه</a><a class="" href="blog.html">مجله سلامت</a><a href="about.html">درباره ما</a><a href="contact.html">تماس</a>
+<a class="" href="index.html">خانه</a><a class="active" href="shop.html">فروشگاه</a><a class="" href="services.html">خدمات سلامت</a><a href="prescription.html">ارسال نسخه</a><a class="" href="blog.html">مجله سلامت</a><a href="about.html">درباره ما</a><a href="contact.html">تماس</a>
 </nav>
 <div class="actions">
 <button class="icon-btn hide-mobile" id="themeToggle" aria-label="تغییر تم">☼</button>
@@ -29,7 +29,7 @@
 <button class="icon-btn menu-toggle" id="menuToggle" aria-label="منوی موبایل">☰</button>
 </div></div>
 <div id="mobileMenu" style="display:none" class="container"><nav class="menu" style="display:flex;flex-direction:column;align-items:stretch;padding:10px 0"><a href="index.html">خانه</a><a href="shop.html">فروشگاه</a><a href="services.html">خدمات سلامت</a><a href="prescription.html">ارسال نسخه</a><a href="blog.html">مجله سلامت</a><a href="faq.html">سوالات متداول</a><a href="contact.html">تماس با ما</a></nav></div>
-<a class="wishlist-shortcut" href="wishlist.html" aria-label="Wishlist / علاقه‌مندی‌ها" title="Wishlist / علاقه‌مندی‌ها">♥ <span class="wishlist-label">Wishlist</span></a></header><main id="main"><section class="page-hero"><div class="container"><div class="crumb">خانه ← ارسال نسخه</div><h1>ارسال نسخه آنلاین</h1><p class="muted">فرم نمایشی برای دریافت اطلاعات اولیه و فایل نسخه.</p></div></section><section class="section"><div class="container" style="max-width:900px"><div class="notice" style="margin-bottom:20px">برای حفظ حریم خصوصی، اطلاعات حساس را در چت یا بخش توضیحات وارد نکنید. در محیط واقعی فایل نسخه باید از طریق اتصال امن و سمت سرور پردازش شود.</div><form id="rxForm" class="info-card"><div class="form-grid"><div class="form-group"><label>نام و نام خانوادگی *</label><input class="field" required autocomplete="name"></div><div class="form-group"><label>شماره موبایل *</label><input class="field" required type="tel" inputmode="tel" autocomplete="tel"></div><div class="form-group"><label>روش دریافت</label><select class="field"><option>ارسال به آدرس</option><option>دریافت حضوری</option></select></div><div class="form-group"><label>زمان ترجیحی</label><select class="field"><option>اولین زمان ممکن</option><option>صبح</option><option>عصر</option></select></div><div class="form-group full"><label>آپلود تصویر یا فایل نسخه *</label><div class="upload"><input id="rxFile" type="file" required accept="image/*,.pdf"><p id="fileName" class="muted">PNG, JPG یا PDF · حداکثر حجم پیشنهادی ۵MB</p></div></div><div class="form-group full"><label>توضیحات</label><textarea class="field" rows="5" placeholder="توضیحات غیرحساس درباره سفارش..."></textarea></div></div><button class="btn btn-primary" type="submit" style="margin-top:18px">ثبت درخواست نسخه</button></form></div></section></main><footer class="footer"><div class="container footer-grid">
+<a class="wishlist-shortcut" href="wishlist.html" aria-label="Wishlist / علاقه‌مندی‌ها" title="Wishlist / علاقه‌مندی‌ها">♥ <span class="wishlist-label">Wishlist</span></a></header><main id="main"><section class="page-hero"><div class="container"><h1 data-en="My Wishlist">My Wishlist</h1><p data-en="Saved products on this device">Saved products on this device</p></div></section><section class="section"><div class="container"><div class="product-grid" id="wishlistGrid"></div></div></section></main><footer class="footer"><div class="container footer-grid">
 <div><a class="brand" href="index.html" style="color:#fff"><span class="brand-mark"></span><span>نوین‌دارو<small style="color:#9dc2b5">سلامت، ساده و مطمئن</small></span></a><p>یک رابط کاربری مدرن برای فروشگاه و خدمات دیجیتال داروخانه؛ با تمرکز بر اعتماد، دسترسی و تجربه کاربری.</p></div>
 <div><h4>دسترسی سریع</h4><p><a href="shop.html">فروشگاه</a></p><p><a href="prescription.html">ارسال نسخه</a></p><p><a href="services.html">خدمات سلامت</a></p><p><a href="faq.html">سوالات متداول</a></p></div>
 <div><h4>راهنما</h4><p><a href="about.html">درباره نوین‌دارو</a></p><p><a href="blog.html">مجله سلامت</a></p><p><a href="contact.html">تماس با ما</a></p><p><a href="#">حریم خصوصی</a></p></div>

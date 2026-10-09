@@ -26,3 +26,31 @@
 
 ## اجرا
 فایل `index.html` را در مرورگر باز کنید یا پوشه را روی یک static server ساده اجرا کنید.
+
+
+## Stage 1 bilingual upgrade
+- English is the default language on first visit; Persian is available from the header. Preference is stored in localStorage.
+- Document direction switches between LTR and RTL. Core navigation and common storefront labels have English equivalents. Longer editorial text remains Persian until fully localized; this is a partial translation release.
+- Currency remains the original IRR/Toman catalogue values; English display uses IRR, **not** an invented USD exchange rate.
+- Chat is a rule-based demo, not a live AI model. User chat text is inserted safely as text, not HTML. Do not enter sensitive health data.
+- Cart, checkout, prescription upload, contact and newsletter are frontend demonstrations. No payment, order or prescription is sent to a server.
+- Run using `python -m http.server 8000` and visit http://localhost:8000.
+- Production TODO: full English content localization, secure backend, licensed pharmacy verification, secure prescription processing, real AI endpoint with privacy safeguards, and test suite.
+
+
+## Stage 3: 3D-inspired page backgrounds
+See `STAGE3_NOTES.md`. All pages use a locally bundled SVG medical background.
+
+
+See STAGE4_NOTES.md for the latest visual improvements and remaining limitations.
+
+
+See `STAGE5_NOTES.md` for the Stage 5 improvements and limitations.
+
+
+## Stage 6
+See [STAGE6_NOTES.md](STAGE6_NOTES.md) for wishlist functionality and limitations.
+
+
+## Stage 7
+See `STAGE7_NOTES.md` for page-specific backgrounds, privacy disclosure, and demo-service safeguards.
